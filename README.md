@@ -16,6 +16,8 @@ My main work is to develop MVPs for business ideas in my work. Being able to ite
 
 The current stack uses standard gems and libraries. For example, I'm using Bootstrap 5 for CSS templates. I tried using Tailwind - it's excellent, but it would require more time to customize. The advantage of Bootstrap 5 is that there are many examples and themes that I can build on top.
 
+To accelerate development, I use HAML, Simple_form and SCSS.
+
 For the login system, I'm using Devise with Rollify and CanCanCan. Very standard implementation.
 
 For social login, it's more complicated. Again, I'm using omniauth, but I had to customize it, and you will see it in the relevant sections in the code.
@@ -32,8 +34,21 @@ You should be able to run this code quickly.
 
 Clone this repo.
 
+    git clone https://github.com/designium/rails7base
+
 Then do
+
     bundle install
+
+Run the following commands to install esbuild and scss:
+
+     ./bin/rails javascript:install:esbuild
+
+Ignore all the errors. We have the files in place already.
+
+     ./bin/rails css:install:bootstrap
+
+Also ignore all errors, but it will ask you to overwrite, just say "n". Don't overwrite. We have the file setup correctly.
 
 To send an email and use social logins, you have to provide the credentials for each social login, and you must provide the callback URL for each provider. Please follow the instructions for each omniauth library. Check the Gemfile.
 
