@@ -1,0 +1,34 @@
+.container-fluid
+  .row.top-buffer
+    .col-sm-12
+      .row.justify-content-md-center.pt-5
+        .col-md-auto.bg-white.rounded-3.p-5.shadow
+          .form.form-signin
+            .text-center.mb-4
+              %h3.fw-bolder Sign Up 😎
+              %br
+              %p Create an account to access our product.
+
+              = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+                = f.error_notification
+                .form-inputs
+                  = f.input :email,                       |
+                    required: true,                       |
+                    autofocus: true,                      |
+                    input_html: { autocomplete: "email", class: "rounded-pill" }, |
+                  placeholder: "Email Address", label: false
+                  %br
+                  = f.input :password,                                                                    |
+                    required: true,                                                                       |
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), |
+                    input_html: { autocomplete: "new-password", class: "rounded-pill" }, |
+                    placeholder: "Password", label: false
+                  = f.input :password_confirmation,              |
+                    required: true,                              |
+                    input_html: { autocomplete: "new-password", class: "rounded-pill" }, |
+                    placeholder: "Confirm Password", label: false
+                .form-actions.pt-3
+                  = f.button :submit, "Sign up", class: "btn btn-lg btn-pink btn-block w-100 rounded-pill", data: { turbo: "false" }
+              %p.text-center.mt-4
+                - if controller_name != 'sessions'
+                  = link_to "If you have an account already, click here.", new_session_path(resource_name), class: "px-2 link-dark"

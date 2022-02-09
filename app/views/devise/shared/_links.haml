@@ -1,0 +1,24 @@
+- if devise_mapping.omniauthable?
+  - resource_class.omniauth_providers.each do |provider|
+    = button_to omniauth_authorize_path(resource_name, provider), method: :post, "data-turbo": false, class: "w-100 btn btn-outline-pink btn-block rounded-pill mt-2" do
+      =inline_svg_tag "#{OmniAuth::Utils.camelize(provider).gsub("Oauth2", "")}.svg", style:"width: 28px; height: 28px;"
+      %span.align-middle
+        ="Sign in with #{OmniAuth::Utils.camelize(provider).gsub("Oauth2", "")}"
+.pt-4.pb-3
+  %p.text-center
+    .line-words-middle
+      %span Create an Account with Email
+- if devise_mapping.registerable? && controller_name != 'registrations'
+  = link_to "Sign up with Email", new_registration_path(resource_name), class: "w-100 btn btn-outline-pink btn-block rounded-pill mt-2"
+  %br/
+
+
+- if controller_name != 'sessions'
+  = link_to "Log in", new_session_path(resource_name), class: "w-100 btn btn-lg btn-primary"
+  %br/
+- if devise_mapping.confirmable? && controller_name != 'confirmations'
+  = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
+  %br/
+- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks'
+  = link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name)
+  %br/

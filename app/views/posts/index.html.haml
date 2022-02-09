@@ -1,0 +1,30 @@
+%h1 Listing posts
+
+%p= page_entries_info @posts
+= paginate @posts, theme: 'bootstrap-5'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th{scope: "col"} Title
+      %th{scope: "col"} Content
+      %th{scope: "col"} User
+      %th{scope: "col"}
+      %th{scope: "col"}
+      %th{scope: "col"}
+
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.content
+        %td= post.user.id
+        %td= link_to 'Show', post
+        %td= link_to 'Edit', edit_post_path(post)
+        %td= link_to 'Destroy', post, data: { turbo_method: :delete,turbo_confirm: "Are you sure?" }
+
+%br
+= paginate @posts, theme: 'bootstrap-5'
+%br
+
+= link_to 'New Post', new_post_path, class: "btn btn-primary"

@@ -1,0 +1,39 @@
+.container-fluid
+  .row.top-buffer
+    .col-sm-12
+      .row.justify-content-md-center.pt-5
+        .col-md-auto.bg-white.rounded-3.p-5.shadow
+          .form.form-signin
+            .text-center.mb-4
+              %h3.fw-bolder Login 🗝
+              %br
+              %p Please sign in before accessing the system.
+
+              = render "devise/shared/links"
+
+            .pt-3.pb-3
+              %p.text-center
+                .line-words-middle
+                  %span Or Sign in with Email ✉️
+
+            = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              .form-inputs
+                = f.input :email,                       |
+                  required: false,                      |
+                  autofocus: true,                      |
+                  input_html: { autocomplete: "email", class: "rounded-pill" }, |
+                  placeholder: "Email address", label: false
+                -#
+                %br
+                = f.input :password,                               |
+                  required: false,                                 |
+                  input_html: { autocomplete: "current-password", class: "rounded-pill" }, |
+                  placeholder: "Password", label: false
+                .checkbox.mb-3.mt-3
+                  = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+              .form-actions
+                = f.button :submit, "Sign In", class: "btn btn-lg btn-pink btn-block w-100 rounded-pill", data: { turbo: "false" }
+
+            %p.text-center.mt-4
+              - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+                = link_to "Forgot Password?", new_password_path(resource_name), class: "px-2 link-dark mt-2"

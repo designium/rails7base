@@ -1,0 +1,17 @@
+=render 'shared/header'
+
+.container-fluid
+  .row
+    .col-sm-7
+      =inline_svg_tag "busy-project-manager.svg"
+    .col-sm-5
+      .row.justify-content-md-center.pt-5.w-75
+        .col-md-auto
+          %h2.display-1.fw-bolder Money issues?
+          %h2.display-1 We can help.
+          %p We help people to meet their obligations and dreams every day. Join us and discover how we can help.
+          %form
+            .mb-3
+              %input#inputEmail.form-control.rounded-pill{:autofocus => "", :placeholder => "Email address", :required => "", :type => "email"}/
+              #emailHelp.form-text.text-center We'll never share your email with anyone else.
+            %button.btn.btn-pink.btn-block.w-100.rounded-pill{:type => "submit"} Submit

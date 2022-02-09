@@ -1,0 +1,10 @@
+%main
+  .row
+    - if notice
+      .alert.alert-primary.alert-dismissible.fade.show{role: "alert"}
+        = notice
+        %button.btn-close{"aria-label" => "Close", "data-bs-dismiss" => "alert", :type => "button"}
+    - if alert
+      .alert.alert-danger.alert-dismissible.fade.show{role: "alert"}
+        = alert
+        %button.btn-close{"aria-label" => "Close", "data-bs-dismiss" => "alert", :type => "button"}

@@ -1,0 +1,36 @@
+.container-fluid
+  .row.top-buffer
+    .col-sm-12
+      .row.justify-content-md-center.pt-5
+        .col-md-auto.bg-white.rounded-3.p-5.shadow
+          .form.form-signin
+            .text-center.mb-4
+              %h3.fw-bolder Create a New Password 🔏
+              %br
+              %p Let's change your password.
+
+              = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+                = f.error_notification
+                = f.input :reset_password_token, as: :hidden
+                = f.full_error :reset_password_token
+                .form-inputs
+                  = f.input :password,                                                                    |
+                    label: "New password",                                                                |
+                    required: true,                                                                       |
+                    autofocus: true,                                                                      |
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), |
+                    input_html: { autocomplete: "new-password", class: "rounded-pill" }, |
+                    placeholder: "New Password", label: false
+                  %br
+                  = f.input :password_confirmation,              |
+                    label: "Confirm your new password",          |
+                    required: true,                              |
+                    input_html: { autocomplete: "new-password", class: "rounded-pill" }, |
+                    placeholder: "Confirm New Password", label: false
+                  %br
+                .form-actions
+                  = f.button :submit, "Change my password", class: "btn btn-lg btn-pink btn-block w-100 rounded-pill", data: { turbo: "false" }
+
+              %p.text-center.mt-4
+                - if controller_name != 'sessions'
+                  = link_to "If you go back to Sign In Page, click here.", new_session_path(resource_name), class: "px-2 link-dark"

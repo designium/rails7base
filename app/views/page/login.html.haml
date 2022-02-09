@@ -1,0 +1,35 @@
+.container-fluid
+  .row.top-buffer
+    .col-sm-6
+      .row.justify-content-md-center.pt-5
+        .col-md-auto
+          %form.form-signin
+            .text-center.mb-4
+              %h3.fw-bolder Login 🗝
+              %p Please sign in before accessing the system.
+              = link_to "#", method: :post, "data-turbo": false, class: "w-100 btn btn-outline-pink btn-block rounded-pill" do
+                =inline_svg_tag "google-g-2015.svg", style:"width: 30px; height: 30px;"
+                %span.align-middle
+                  Sign in with Google
+              %br
+              = button_to "#", method: :post, "data-turbo": false, class: "w-100 btn btn-outline-pink btn-block rounded-pill mt-2" do
+                =inline_svg_tag "facebook-2020-1-1.svg", style:"width: 28px; height: 30px;"
+                %span.align-middle
+                  Sign in with Facebook
+            %p.text-center Or Sign in with Email
+            .form-label-group
+              %input#inputEmail.form-control.rounded-pill{:autofocus => "", :placeholder => "Email address", :required => "", :type => "email"}/
+              / %label{:for => "inputEmail"} Email address
+            .form-label-group.mt-3.mb-3
+              %input#inputPassword.form-control.rounded-pill{:placeholder => "Password", :required => "", :type => "password"}/
+              / %label{:for => "inputPassword"} Password
+            .checkbox.mb-3
+              %label
+                %input{:type => "checkbox", :value => "remember-me"}/
+                Remember me
+            %button.btn.btn-lg.btn-pink.btn-block.w-100.rounded-pill{:type => "submit"} Sign in
+
+            %p.text-center.mt-4
+              %a.px-2.link-dark{:href => "#"} Forgot Password?
+    .col-sm-6
+      =inline_svg_tag "busy-project-manager.svg"

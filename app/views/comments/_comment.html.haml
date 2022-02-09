@@ -1,0 +1,25 @@
+%li.list-unstyled.indentation-comment
+%figure
+  %blockquote.blockquote
+    %p= comment.content
+  %figcaption.blockquote-footer
+    Submitted #{time_ago_in_words(comment.created_at)} ago by
+    %cite{:title => "Source Title"}
+      #{comment.user.name || "Anonymous User"}
+
+  = simple_form_for [comment, Comment.new] do |f|
+    / not the best implementation but I don't know other way of doing this: generate unique ID for comments.
+    - random_number = rand(99999)
+    %p
+      %a.btn.btn-sm.btn-link{"aria-controls" => "collapseExample_#{random_number}", "aria-expanded" => "false", "data-bs-toggle" => "collapse", :href => "#collapseExample_#{random_number}", :role => "button"}
+        Reply to #{comment.user.name || "Anonymous User"}
+    %div.collapse{id: "collapseExample_#{random_number}"}
+      %small
+      / = f.input :content, as: :rich_text_area, placeholder: "Add a Reply", id: f.index
+      / I cannot find a way to solve this problem of using rich text with nested comment at this point.
+      = f.text_area :content, placeholder: "Add a Reply", class: "form-control rich_text_area required"
+      %br/
+      = f.submit "Reply", class: "btn btn-sm btn-primary"
+  %p
+    %ul
+      = render partial: 'comments/comment', collection: comment.comments

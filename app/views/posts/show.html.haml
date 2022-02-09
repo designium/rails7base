@@ -1,0 +1,31 @@
+%h1 Show post
+
+%p#notice= notice
+
+%p
+  %b Title:
+  = @post.title
+%p
+  %b Content:
+  = @post.content
+%p
+  %b User:
+  = @post.user.id
+
+
+.btn-group
+  = link_to 'See all posts', posts_url, class: "btn btn-sm btn-outline-primary"
+  = link_to 'Edit', edit_post_path(@post), class: "btn btn-sm btn-outline-primary" if @post.user.id == current_user.id
+  = link_to 'Back', :back, class: "btn btn-sm btn-outline-primary"
+
+
+
+%h5.mt-4 Comments
+%p
+  = simple_form_for [@post, Comment.new] do |f|
+    / = f.input :content, as: :rich_text_area, placeholder: "Add a Reply"
+    = f.text_area :content, placeholder: "Add a Reply", class: "form-control rich_text_area required"
+    %br/
+    = f.submit "Reply", class: "btn btn-sm btn-primary"
+%ul
+  = render partial: "comments/comment", collection: @post.comments, as: 'comment'

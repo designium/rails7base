@@ -1,0 +1,12 @@
+.row
+  = simple_form_for(@post) do |f|
+    = f.error_notification
+    = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+    .form-inputs
+      .col-12.mt-3= f.input :title
+      .col-12.mt-3= f.input :content, as: :rich_text_area
+
+    %my-4
+    .form-actions
+      .col-12.mt-3= f.button :submit, class: "w-100 btn btn-primary"

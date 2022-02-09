@@ -1,0 +1,165 @@
+/ = render "shared/skinny_header"
+
+.container-fluid
+  .row
+    =render "shared/sidebar"
+    %main.col-md-9.ml-sm-auto.col-lg-10.p-5.px-4.shadow-lg.bg-white{:role => "main"}
+      .d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pb-2.mb-3
+        %h1.h2 Transactions
+        .btn-toolbar.mb-2.mb-md-0
+          .btn-group.mr-2
+            %button.btn.btn-sm.btn-outline-secondary Share
+            %button.btn.btn-sm.btn-outline-secondary Export
+          %button.btn.btn-sm.btn-outline-secondary.dropdown-toggle
+            %svg.feather.feather-calendar{:fill => "none", :height => "24", :stroke => "currentColor", "stroke-linecap" => "round", "stroke-linejoin" => "round", "stroke-width" => "2", :viewbox => "0 0 24 24", :width => "24", :xmlns => "http://www.w3.org/2000/svg"}
+              %rect{:height => "18", :rx => "2", :ry => "2", :width => "18", :x => "3", :y => "4"}
+              %line{:x1 => "16", :x2 => "16", :y1 => "2", :y2 => "6"}
+              %line{:x1 => "8", :x2 => "8", :y1 => "2", :y2 => "6"}
+              %line{:x1 => "3", :x2 => "21", :y1 => "10", :y2 => "10"}
+      .row
+        .col
+          .row.justify-content-md-center
+            .col-md-auto
+              %p.fs-5.fw-bold.pt-3 Last 30 Days
+        .col.vertical
+          .row.justify-content-md-center
+            .col-md-auto
+              %cite.text-uppercase Transactions
+              %p.fs-5.fw-bold 95
+        .col.vertical
+          .row.justify-content-md-center
+            .col-md-auto
+              %cite.text-uppercase Total Spent
+              %p.fs-5.fw-bold $1,343,343.00
+        .col.vertical
+          .row.justify-content-md-center
+            .col-md-auto
+              %cite.text-uppercase Total Cashback
+              %p.fs-5.fw-bold $1,000.34 (2%)
+      .row.pt-4
+        .col-4
+          .input-group.mb-3
+            %input.form-control{"aria-describedby" => "basic-addon2", "aria-label" => "Recipient's username", :placeholder => "Type anything ...", :type => "text"}/
+            .input-group-append
+              %button.btn.btn-pink{:type => "button"} Search
+        .col-8
+          %input.form-control.w-25{:type => "date"}/
+      .row
+        .col-10
+          %h2
+            Today
+          .table-responsive
+            %table.table.table-sm.table-hover
+              %thead
+                %tr
+                  %th #
+                  %th Header
+                  %th Header
+                  %th Header
+                  %th Header
+              %tbody
+                %tr
+                  %td 1,001
+                  %td Lorem
+                  %td ipsum
+                  %td dolor
+                  %td sit
+                %tr
+                  %td 1,002
+                  %td
+                    %span.badge.bg-danger Danger
+                    amet
+                  %td consectetur
+                  %td adipiscing
+                  %td elit
+                %tr
+                  %td 1,003
+                  %td Integer
+                  %td nec
+                  %td odio
+                  %td Praesent
+                %tr
+                  %td 1,003
+                  %td libero
+                  %td Sed
+                  %td cursus
+                  %td ante
+                %tr
+                  %td 1,004
+                  %td dapibus
+                  %td diam
+                  %td Sed
+                  %td nisi
+                %tr
+                  %td 1,005
+                  %td Nulla
+                  %td quis
+                  %td sem
+                  %td at
+                %tr
+                  %td 1,006
+                  %td nibh
+                  %td elementum
+                  %td imperdiet
+                  %td Duis
+                %tr
+                  %td 1,007
+                  %td sagittis
+                  %td ipsum
+                  %td Praesent
+                  %td mauris
+                %tr
+                  %td 1,008
+                  %td Fusce
+                  %td nec
+                  %td tellus
+                  %td sed
+                %tr
+                  %td 1,009
+                  %td augue
+                  %td semper
+                  %td porta
+                  %td Mauris
+                %tr
+                  %td 1,010
+                  %td massa
+                  %td Vestibulum
+                  %td lacinia
+                  %td arcu
+                %tr
+                  %td 1,011
+                  %td eget
+                  %td nulla
+                  %td Class
+                  %td aptent
+                %tr
+                  %td 1,012
+                  %td taciti
+                  %td sociosqu
+                  %td ad
+                  %td litora
+                %tr
+                  %td 1,013
+                  %td torquent
+                  %td per
+                  %td conubia
+                  %td nostra
+                %tr
+                  %td 1,014
+                  %td per
+                  %td inceptos
+                  %td himenaeos
+                  %td Curabitur
+                %tr
+                  %td 1,015
+                  %td sodales
+                  %td ligula
+                  %td in
+                  %td libero
+        .col-2.top-buffer.d-none.d-lg-block
+          .card.shadow.bg-light.text-dark
+            .card-body
+              %h5.card-title Card title
+              %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+              %a.btn.btn-sm.btn-pink{:href => "#"} Yes
+              %a.btn.btn-sm.btn-outline-pink{:href => "#"} No

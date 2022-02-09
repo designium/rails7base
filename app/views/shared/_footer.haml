@@ -1,0 +1,13 @@
+%footer.my-5.pt-5.text-muted.text-center.text-small
+  - if user_signed_in?
+    .pb-5
+      = link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }
+
+  %p.mb-1 © 2022 Company Name
+  %ul.list-inline
+    %li.list-inline-item
+      %a{href: "#"} Privacy
+    %li.list-inline-item
+      %a{href: "#"} Terms
+    %li.list-inline-item
+      %a{href: "#"} Support

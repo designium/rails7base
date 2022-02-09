@@ -1,0 +1,62 @@
+/* Chim's customization */
+
+body {
+  background-color: #fff1f2;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+.new_user {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+body{
+margin:0;
+padding:0;
+}
+
+.btn-pink {
+  color: #fff;
+  background-color: #EA1063;
+  border-color: #EA1063;
+}
+.btn-pink:hover, .btn-pink:focus, .btn-pink:active, .btn-pink.active {
+  color: #fff;
+  opacity: 0.5;
+}
+.btn-outline-pink {
+  color:#EA1063;
+  border-color: #EA1063;
+}
+.btn-outline-pink:hover, .btn-outline-pink:focus, .btn-outline-pink:active, .btn-outline-pink.active {
+  opacity: 0.5;
+  color:#EA1063;
+}
+
+.top-buffer { margin-top:5rem; }
+
+.nav-link {
+  color: #000;
+}
+
+.vertical {
+    border-left: 1px solid black;
+  }
+
+.line-words-middle {
+   width: 100%;
+   text-align: center;
+   border-bottom: 1px solid #000;
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+}
+
+.line-words-middle span {
+    background:#fff;
+    padding:0 10px;
+}
