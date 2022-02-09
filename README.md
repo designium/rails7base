@@ -38,6 +38,7 @@ Then do
 To send an email and use social logins, you have to provide the credentials for each social login, and you must provide the callback URL for each provider. Please follow the instructions for each omniauth library. Check the Gemfile.
 
 You have to provide your credentials to run the social login part.
+
     EDITOR="nano" bin/rails credentials:edit
 
 Add the following template into your credentials file (change the brackets for your value - no quotes):
