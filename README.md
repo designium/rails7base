@@ -2,7 +2,7 @@
 
 I created the Rails7Base as a scaffold application.
 
-![Alt text](/app/assets/imagse/screenshots/rails7base_20220209_002.png?raw=true "You can access from localhost:3000/page/homepage")
+![Alt text](https://github.com/designium/rails7base/blob/main/app/assets/images/screenshots/rails7base_20220209_002.jpg "You can access from localhost:3000/page/homepage")
 
 Countless times, I had to create apps that must have the following features:
 
@@ -26,9 +26,9 @@ For social login, it's more complicated. Again, I'm using omniauth, but I had to
 
 ## Additional Screenshots
 
-![Alt text](/app/assets/imagse/screenshots/rails7base_20220209_001.png?raw=true "You can access from localhost:3000/page/login2")
+![Alt text](https://github.com/designium/rails7base/blob/main/app/assets/images/screenshots/rails7base_20220209_001.jpg "You can access from localhost:3000/page/login2")
 
-![Alt text](/app/assets/imagse/screenshots/rails7base_20220209_003.png?raw=true "You can access from localhost:3000/page/transactions")
+![Alt text](https://github.com/designium/rails7base/blob/main/app/assets/images/screenshots/rails7base_20220209_003.jpg "You can access from localhost:3000/page/transactions")
 
 You can use the classes in the html elements to customize your app.
 
