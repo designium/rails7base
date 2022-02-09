@@ -2,6 +2,8 @@
 
 I created the Rails7Base as a scaffold application.
 
+![Alt text](/app/assets/imagse/screenshots/rails7base_20220209_002.png?raw=true "You can access from localhost:3000/page/homepage")
+
 Countless times, I had to create apps that must have the following features:
 
 1. Login system
@@ -21,6 +23,14 @@ To accelerate development, I use HAML, Simple_form and SCSS.
 For the login system, I'm using Devise with Rollify and CanCanCan. Very standard implementation.
 
 For social login, it's more complicated. Again, I'm using omniauth, but I had to customize it, and you will see it in the relevant sections in the code.
+
+## Additional Screenshots
+
+![Alt text](/app/assets/imagse/screenshots/rails7base_20220209_001.png?raw=true "You can access from localhost:3000/page/login2")
+
+![Alt text](/app/assets/imagse/screenshots/rails7base_20220209_003.png?raw=true "You can access from localhost:3000/page/transactions")
+
+You can use the classes in the html elements to customize your app.
 
 ## What have I not added to this base code?
 
@@ -99,5 +109,7 @@ Finally
 
      ./bin/dev
 
+You will be routed to the login page. You can just create a dummy user to access the post class. Currently, it is the main routing path.
 
+You need to customize the look and feel!
 
