@@ -94,6 +94,7 @@ gem "letter_opener", group: :development #amazing
 gem 'discard', '~> 1.2'
 gem 'rolify'
 gem 'inline_svg'
+gem "chartkick"
 
 #Omniauth stuff
 gem 'omniauth-google-oauth2'

@@ -1,2 +1,8 @@
 %h1 Page#loanrequest
 %p Find me in app/views/page/loanrequest.html.haml
+
+=line_chart [ {name: "Workout", data: {"2021-01-01" => 3, "2021-01-02" => 4}},{name: "Call parents", data: {"2021-01-01" => 5, "2021-01-02" => 3}} ]
+
+= pie_chart [["Text", 10], ["Text 2", 50], ["Text 3", 20]]
+
+= line_chart [["2021-01-01", 2], ["2021-01-02", 3]]

@@ -28,6 +28,7 @@ config/credentials.yml.enc
 # dotenv
 # TODO Comment out this rule if environment variables can be committed
 .env
+.env*
 
 ## Environment normalization:
 /.bundle
@@ -64,5 +65,14 @@ yarn-debug.log*
 .yarn-integrity
 
 # Ignore uploaded files in development
+# and the builds
 /storage/*
 !/storage/.keep
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
+#Ignore all tomo files
+/.tomo
+
+#Ignore the config.json file for Google Drive and Sheet
+/config/config.json
