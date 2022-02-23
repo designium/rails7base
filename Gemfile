@@ -107,3 +107,4 @@ gem 'omniauth-quickbooks-oauth2', github: 'designium/omniauth-quickbooks-oauth2'
 gem "omniauth-rails_csrf_protection"
 
 
+gem "sassc-rails"
