@@ -1,6 +1,6 @@
 .container-fluid
   .row
-    %main.col-md-9.ml-sm-auto.col-lg-10.p-5.px-4{:role => "main"}
+    %main.ml-sm-auto.p-5.px-4{:role => "main"}
       .d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pb-2.mb-3
         %h1.h2
           <%= human_name.pluralize %>
@@ -25,7 +25,7 @@
                   %th{scope: "col"}
 
               %tbody
-                - @<%= class_name %>.each do |<%= singular_table_name %>|
+                - @<%= class_name.downcase.pluralize %>.each do |<%= singular_table_name %>|
                   %tr
                   <% for attribute in attributes %>
                     %td= <%= singular_table_name %>.<%= attribute.name %>
