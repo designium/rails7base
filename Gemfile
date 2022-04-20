@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.0"
+ruby "3.1.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2.3"
@@ -106,3 +106,4 @@ gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 gem 'omniauth-quickbooks-oauth2', github: 'designium/omniauth-quickbooks-oauth2'
 gem "omniauth-rails_csrf_protection"
 
+gem "sassc-rails"

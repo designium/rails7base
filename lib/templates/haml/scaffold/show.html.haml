@@ -1,0 +1,23 @@
+.container-fluid
+  .row
+    %main.col-md-9.ml-sm-auto.col-lg-10.p-5.px-4{:role => "main"}
+      .d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pb-2.mb-3
+        %h1.h2
+          Show <%= human_name.capitalize %>
+      .row.card.shadow-lg.p-3
+        .col
+
+          %p#notice= notice
+
+          <% for attribute in attributes -%>
+
+          %p
+
+            %b <%= attribute.human_name %>:
+            = @<%= singular_table_name %>.<%= attribute.name %>
+          <% end %>
+
+          .btn-group
+            = link_to 'See all <%= human_name.pluralize %>', <%= plural_table_name %>_url, class: "btn btn-sm btn-outline-pink"
+            = link_to 'Edit',  edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: "btn btn-sm btn-outline-pink"
+            = link_to 'Back', :back, class: "btn btn-sm btn-outline-pink"

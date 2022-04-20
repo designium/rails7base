@@ -1,0 +1,36 @@
+.container-fluid
+  .row
+    %main.col-md-9.ml-sm-auto.col-lg-10.p-5.px-4{:role => "main"}
+      .d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pb-2.mb-3
+        %h1.h2
+          <%= human_name.pluralize %>
+          = link_to "New <%= human_name.downcase %>", <%= new_helper(type: :path) %>, class: "btn btn-pink"
+      .row
+        .col
+          %cite.text-uppercase
+            <%= human_name.pluralize %>
+            = "#"
+          %p.fs-5.fw-bold
+            =<%= singular_table_name.capitalize %>.count
+
+      .row
+        .col
+          .table-responsive.card.shadow
+            %table.table.table-hover.align-middle
+              %thead.table-dark
+                %tr
+                <% for attribute in attributes %>
+                  %th{scope: "col"}<%= attribute.human_name %>
+                <% end %>
+                  %th{scope: "col"}
+
+              %tbody
+                - @<%= class_name %>.each do |<%= singular_table_name %>|
+                  %tr
+                  <% for attribute in attributes %>
+                    %td= <%= singular_table_name %>.<%= attribute.name %>
+                  <% end %>
+                    %td.d-flex.justify-content-end
+                      .ms-2= link_to 'Show', <%= singular_table_name %>, class: "btn btn-sm btn-pink"
+                      .ms-2= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: "btn btn-sm btn-outline-pink"
+                      .ms-2= link_to 'Destroy', <%= singular_table_name %>, data: { turbo_method: :delete,turbo_confirm: "Are you sure you want to delete?" }, class: "btn btn-sm btn-link"
