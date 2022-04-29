@@ -1,8 +1,10 @@
 # https://yuta-san.medium.com/a-simple-login-test-with-rails-devise-and-unit-test-68bc4fade4ba
 
-# # https://github.com/codecov/ruby-standard-1
-# require 'simplecov'
-# SimpleCov.start
+# https://github.com/codecov/ruby-standard-1
+# https://stackoverflow.com/questions/15389107/minitest-testing-and-code-coverage
+# https://github.com/simplecov-ruby/simplecov
+require 'simplecov'
+SimpleCov.start 'rails'
 
 # require 'codecov'
 # SimpleCov.formatter = SimpleCov::Formatter::Codecov

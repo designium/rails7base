@@ -110,5 +110,5 @@ gem "sassc-rails"
 
 # Testing coverage etc
 
-gem 'codecov', require: false
-gem 'simplecov', require: false
+gem 'codecov', require: false, group: :test
+gem 'simplecov', require: false, group: :test
