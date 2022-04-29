@@ -9,7 +9,8 @@ class Ability
       # user ||= User.new # guest user (not logged in)
 
     if user.present?
-      can :manage, Post, user_id: user.id
+      can :manage, Post
+      # can :manage, Post, user_id: user.id
       # can :manage, Profile, user_id: user.id
       # can :read, Profile
       can :read, Post

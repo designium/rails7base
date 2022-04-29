@@ -1,11 +1,20 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# https://stackoverflow.com/questions/62509954/how-test-the-action-text-how-to-add-the-action-text-in-yml
 
 one:
   title: MyString
-  content: MyText
-  user_id: one
+  # content: MyText
+  user: one (User)
+
 
 two:
   title: MyString
-  content: MyText
-  user_id: two
+  # content: MyText
+  user: two (User)
+
+
+three:
+  title: MyString
+  # content: MyText
+  user: one (User)
+

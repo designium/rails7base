@@ -18,7 +18,7 @@
       %tr
         %td= post.title
         %td= post.content
-        %td= post.user.id
+        %td= post.user_id
         %td= link_to 'Show', post
         %td= link_to 'Edit', edit_post_path(post)
         %td= link_to 'Destroy', post, data: { turbo_method: :delete,turbo_confirm: "Are you sure?" }

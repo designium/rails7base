@@ -10,12 +10,12 @@
   = @post.content
 %p
   %b User:
-  = @post.user.id
+  = @post.user_id
 
 
 .btn-group
   = link_to 'See all posts', posts_url, class: "btn btn-sm btn-outline-primary"
-  = link_to 'Edit', edit_post_path(@post), class: "btn btn-sm btn-outline-primary" if @post.user.id == current_user.id
+  = link_to 'Edit', edit_post_path(@post), class: "btn btn-sm btn-outline-primary" if can? :edit, Post
   = link_to 'Back', :back, class: "btn btn-sm btn-outline-primary"
 
 

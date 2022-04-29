@@ -38,4 +38,7 @@ class PageController < ApplicationController
   def concert_details
   end
 
+  def dashboard_analytics
+  end
+
 end
