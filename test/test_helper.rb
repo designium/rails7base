@@ -1,5 +1,12 @@
 # https://yuta-san.medium.com/a-simple-login-test-with-rails-devise-and-unit-test-68bc4fade4ba
 
+# # https://github.com/codecov/ruby-standard-1
+# require 'simplecov'
+# SimpleCov.start
+
+# require 'codecov'
+# SimpleCov.formatter = SimpleCov::Formatter::Codecov
+
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
