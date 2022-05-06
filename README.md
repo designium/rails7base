@@ -1,6 +1,6 @@
 ![Alt text](https://img.shields.io/github/last-commit/designium/rails7base?style=flat-square "Last Commit Badge")
-![Alt text](https://img.shields.io/badge/Ruby-%3E3.0-red "Ruby")
-![Alt text](https://img.shields.io/badge/Rails-%3E7.0-red "Rails")
+![Alt text](https://img.shields.io/badge/Ruby-%3E3.0-red?style=flat-square  "Ruby")
+![Alt text](https://img.shields.io/badge/Rails-%3E7.0-red?style=flat-square  "Rails")
 # Rails7Base
 
 I created the Rails7Base as a scaffold application.
