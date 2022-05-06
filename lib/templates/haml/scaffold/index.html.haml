@@ -11,7 +11,7 @@
             <%= human_name.pluralize %>
             = "#"
           %p.fs-5.fw-bold
-            =<%= singular_table_name.capitalize %>.count
+            =<%= class_name %>.count
 
       .row
         .col
@@ -25,7 +25,7 @@
                   %th{scope: "col"}
 
               %tbody
-                - @<%= class_name.downcase.pluralize %>.each do |<%= singular_table_name %>|
+                - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
                   %tr
                   <% for attribute in attributes %>
                     %td= <%= singular_table_name %>.<%= attribute.name %>
